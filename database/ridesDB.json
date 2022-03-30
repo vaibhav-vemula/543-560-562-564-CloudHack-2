@@ -90,6 +90,27 @@
             "time": 1,
             "cost": 10,
             "seats": 1
+        },
+        "14": {
+            "pickup": "PES University",
+            "destination": "Electronic city",
+            "time": 1,
+            "cost": 10,
+            "seats": 1
+        },
+        "15": {
+            "pickup": "PES University",
+            "destination": "Electronic city",
+            "time": 1,
+            "cost": 10,
+            "seats": 1
+        },
+        "16": {
+            "pickup": "JP Nagar",
+            "destination": "PES University",
+            "time": 5,
+            "cost": 1100,
+            "seats": 4
         }
     }
 }

@@ -33,8 +33,8 @@ def new_ride():
     print('-----------------------------------------------')
     rmqch.basic_publish(routing_key = 'ride_match', body = mess, exchange='')
     rmqch.basic_publish(routing_key = 'database', body = mess,exchange='')
-    # time = str(data['time'])
-    # t.sleep(int(time))
+    time = str(data['time'])
+    t.sleep(int(time))
     return "Ride Booked!! \n Happy Journey"
 
 @app.route('/new_ride_matching_consumer', methods = ['POST'])
@@ -46,6 +46,12 @@ def matchRide():
     cip = request.remote_addr
     cl.append({"IP": cip, "Name": dat['cname']})
     return 'New Ride Matching Consumer Posted'
-    
+
+@app.route('/ride_logs')
+def rideLogs():
+    oo = {
+        'data': cl
+    }
+    return oo
 
 app.run(port=8000, host='0.0.0.0')

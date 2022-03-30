@@ -14,7 +14,7 @@ services:
     ports:
         - 8000:8000
     environment:
-        RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
+        RABBITMQ: 'amqp://rabbit_mq?retry_delay=20&connection_attempts=10'
     volumes:
       - ./producer:/Users/vaibhav/Desktop/cchackathon/producer
 
@@ -24,9 +24,9 @@ services:
         - rabbit_mq
         - producer
     environment:
-        RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
+        RABBITMQ: 'amqp://rabbit_mq?retry_delay=20&connection_attempts=5'
         CNAME: 'CONSUMER 1'
-        SERVER_URL: 'http://producer:8000/new_ride_matching_consumer'
+        PORT: 8000
     volumes:
       - ./consumer:/Users/vaibhav/Desktop/cchackathon/consumer
 
@@ -36,9 +36,9 @@ services:
         - rabbit_mq
         - producer
     environment:
-        RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
+        RABBITMQ: 'amqp://rabbit_mq?retry_delay=10&connection_attempts=5'
         CNAME: 'CONSUMER 2'
-        SERVER_URL: 'http://producer:8000/new_ride_matching_consumer'
+        PORT: 8000
     volumes:
       - ./consumer:/Users/vaibhav/Desktop/cchackathon/consumer
 

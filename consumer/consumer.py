@@ -6,10 +6,11 @@ import pika
 time.sleep(20)
 
 rmq = os.environ['RABBITMQ']
-server_url = os.environ['SERVER_URL']
 cname = os.environ['CNAME']
+port = os.environ['PORT']
 
-requests.post(server_url, json = {'cname':cname})
+ridelogs = 'http://producer:'+str(port)+'/new_ride_matching_consumer'
+requests.post(ridelogs, json = {'cname':cname})
 
 connection = pika.BlockingConnection(pika.URLParameters(rmq))
 rmqch = connection.channel()
