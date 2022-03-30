@@ -44,7 +44,7 @@ def matchRide():
     print(type(dat))
     print(dat['cname'])
     cip = request.remote_addr
-    cl.append({"IP": cip, "Name": dat['cname']})
+    cl.append({"IP": cip, "Consumer ID": dat['cname'], "Name":dat['uname']})
     return 'New Ride Matching Consumer Posted'
 
 @app.route('/ride_logs')
