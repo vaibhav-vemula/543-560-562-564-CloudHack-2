@@ -18,13 +18,13 @@ cl = []
 
 @app.route('/')
 def testGet():
-    return "Flask Server running at" + port
+    return "Flask Server running at" + str(port)
 
 @app.route('/testpost', methods = ['POST'])
 def testPost():
     return "Post Request Working"
 
-@app.route('/new-ride', methods = ['POST'])
+@app.route('/new_ride', methods = ['POST'])
 def new_ride():
     data = request.get_json()
     mess = json.dumps(data)
@@ -39,9 +39,13 @@ def new_ride():
 
 @app.route('/new_ride_matching_consumer', methods = ['POST'])
 def matchRide():
-    print(request.data)
-    consumer_id = request.data.consumer_id
-    consumer_ip = request.remote_addr
-    cl.append({"Name": consumer_id,"IP": consumer_ip})
+    dat = request.get_json()
+    print(dat)
+    print(type(dat))
+    print(dat['cname'])
+    cip = request.remote_addr
+    cl.append({"IP": cip, "Name": dat['cname']})
+    return 'New Ride Matching Consumer Posted'
+    
 
 app.run(port=8000, host='0.0.0.0')

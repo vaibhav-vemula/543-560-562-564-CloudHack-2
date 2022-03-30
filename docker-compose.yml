@@ -1,9 +1,6 @@
 version: "3.2"
-
 services:
-
   rabbit_mq:
-
     image: rabbitmq:3.8-rc-management
     container_name: rabbit_mq
     ports:
@@ -28,7 +25,7 @@ services:
         - producer
     environment:
         RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
-        CID: 'c1'
+        CNAME: 'CONSUMER 1'
         SERVER_URL: 'http://producer:8000/new_ride_matching_consumer'
     volumes:
       - ./consumer:/Users/vaibhav/Desktop/cchackathon/consumer
@@ -40,7 +37,7 @@ services:
         - producer
     environment:
         RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
-        CID: 'c2'
+        CNAME: 'CONSUMER 2'
         SERVER_URL: 'http://producer:8000/new_ride_matching_consumer'
     volumes:
       - ./consumer:/Users/vaibhav/Desktop/cchackathon/consumer

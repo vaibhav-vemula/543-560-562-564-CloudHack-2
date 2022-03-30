@@ -1,1 +1,95 @@
-{"_default": {"1": {"pickup": "PES University", "destination": "cccc", "time": 1, "cost": 100, "seats": 3}, "2": {"pickup": "PES University", "destination": "cccc", "time": 1, "cost": 100, "seats": 3}, "3": {"pickup": "PES University", "destination": "cccc", "time": 1, "cost": 100, "seats": 3}, "4": {"pickup": "PES University", "destination": "cccc", "time": 1, "cost": 20, "seats": 3}, "5": {"pickup": "PES University", "destination": "cccc", "time": 1, "cost": 20, "seats": 1}, "6": {"pickup": "PES University", "destination": "Temp", "time": 1, "cost": 20, "seats": 1}, "7": {"pickup": "PES University", "destination": "JP Nagar", "time": 1, "cost": 20, "seats": 1}, "8": {"pickup": "PES University", "destination": "Jay Nagar", "time": 1, "cost": 20, "seats": 1}}}
+{
+    "_default": {
+        "1": {
+            "pickup": "PES University",
+            "destination": "cccc",
+            "time": 1,
+            "cost": 100,
+            "seats": 3
+        },
+        "2": {
+            "pickup": "PES University",
+            "destination": "cccc",
+            "time": 1,
+            "cost": 100,
+            "seats": 3
+        },
+        "3": {
+            "pickup": "PES University",
+            "destination": "cccc",
+            "time": 1,
+            "cost": 100,
+            "seats": 3
+        },
+        "4": {
+            "pickup": "PES University",
+            "destination": "cccc",
+            "time": 1,
+            "cost": 20,
+            "seats": 3
+        },
+        "5": {
+            "pickup": "PES University",
+            "destination": "cccc",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "6": {
+            "pickup": "PES University",
+            "destination": "Temp",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "7": {
+            "pickup": "PES University",
+            "destination": "JP Nagar",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "8": {
+            "pickup": "PES University",
+            "destination": "Jay Nagar",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "9": {
+            "pickup": "PES University",
+            "destination": "Jay Nagar",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "10": {
+            "pickup": "PES University",
+            "destination": "Jay Nagar",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "11": {
+            "pickup": "PES University",
+            "destination": "Jay Nagar",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "12": {
+            "pickup": "PES University",
+            "destination": "Jay Nagar",
+            "time": 1,
+            "cost": 20,
+            "seats": 1
+        },
+        "13": {
+            "pickup": "PES University",
+            "destination": "Whitefield",
+            "time": 1,
+            "cost": 10,
+            "seats": 1
+        }
+    }
+}
