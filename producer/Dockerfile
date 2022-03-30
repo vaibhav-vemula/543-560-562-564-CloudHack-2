@@ -1,19 +1,13 @@
-# basic python image
 FROM python:3.7
 
-# install pika to access rabbitmq
-RUN pip install pika
-RUN pip install requests
-RUN pip install flask
+RUN pip install pika requests flask
 
-# Without this setting, Python never prints anything out.
 ENV PYTHONUNBUFFERED=1
 
-# declare the source directory
 WORKDIR /Users/vaibhav/Desktop/cchackathon/producer
-# copy the file
+
 COPY producer.py .
 
-EXPOSE 5005
-# start command
+EXPOSE 8000
+
 CMD [ "python", "producer.py"]

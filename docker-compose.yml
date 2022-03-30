@@ -15,9 +15,9 @@ services:
     depends_on:
         - rabbit_mq
     ports:
-        - 5005:5005
+        - 8000:8000
     environment:
-        AMQP_URL: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
+        RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
     volumes:
       - ./producer:/Users/vaibhav/Desktop/cchackathon/producer
 
@@ -27,9 +27,9 @@ services:
         - rabbit_mq
         - producer
     environment:
-        AMQP_URL: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
-        CONSUMER_ID: 'c1'
-        SERVER_URL: 'http://producer:5005/new_ride_matching_consumer'
+        RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
+        CID: 'c1'
+        SERVER_URL: 'http://producer:8000/new_ride_matching_consumer'
     volumes:
       - ./consumer:/Users/vaibhav/Desktop/cchackathon/consumer
 
@@ -39,9 +39,9 @@ services:
         - rabbit_mq
         - producer
     environment:
-        AMQP_URL: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
-        CONSUMER_ID: 'c2'
-        SERVER_URL: 'http://producer:5005/new_ride_matching_consumer'
+        RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
+        CID: 'c2'
+        SERVER_URL: 'http://producer:8000/new_ride_matching_consumer'
     volumes:
       - ./consumer:/Users/vaibhav/Desktop/cchackathon/consumer
 
@@ -51,7 +51,7 @@ services:
         - rabbit_mq
         - producer
     environment:
-        AMQP_URL: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
+        RABBITMQ: 'amqp://rabbit_mq?connection_attempts=10&retry_delay=10'
     volumes:
       - ./database:/Users/vaibhav/Desktop/cchackathon/database
 
